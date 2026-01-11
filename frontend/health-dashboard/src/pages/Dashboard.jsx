@@ -247,18 +247,22 @@ const Dashboard = () => {
           About the Developer
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+
+          {/* Nitin bhai */}
           <a
-            href="https://yashbandal.netlify.app/"
+            href="https://github.com/Nitinxxchoudhary"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 flex items-center gap-4 hover:bg-teal-50 dark:hover:bg-teal-900/20 transition-all duration-300 transform hover:scale-105"
           >
-            <Globe size={32} className="text-teal-500 dark:text-teal-400" />
+            <Github size={32} className="text-gray-600 dark:text-gray-400" />
             <div>
-              <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100">Portfolio</h3>
-              <p className="text-teal-500 dark:text-teal-400">yashbandal.netlify.app</p>
+              <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100">GitHub</h3>
+              <p className="text-teal-500 dark:text-teal-400">@Nitin choudhary</p>
             </div>
           </a>
+
           <a
             href="https://github.com/Yash-Bandal"
             target="_blank"
@@ -268,9 +272,38 @@ const Dashboard = () => {
             <Github size={32} className="text-gray-600 dark:text-gray-400" />
             <div>
               <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100">GitHub</h3>
-              <p className="text-teal-500 dark:text-teal-400">@Yash-Bandal</p>
+              <p className="text-teal-500 dark:text-teal-400">@Yash Bandal</p>
             </div>
           </a>
+
+
+          {/* Dnyanesh */}
+          <a
+            href="https://github.com/dnyaneshagale"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 flex items-center gap-4 hover:bg-teal-50 dark:hover:bg-teal-900/20 transition-all duration-300 transform hover:scale-105"
+          >
+            <Github size={32} className="text-gray-600 dark:text-gray-400" />
+            <div>
+              <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100">GitHub</h3>
+              <p className="text-teal-500 dark:text-teal-400">Dnyanesh Agale</p>
+            </div>
+          </a>
+
+          {/* soham bhai */}
+          <a
+          href="https://github.com/sohamac"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 flex items-center gap-4 hover:bg-teal-50 dark:hover:bg-teal-900/20 transition-all duration-300 transform hover:scale-105"
+        >
+          <Github size={32} className="text-gray-600 dark:text-gray-400" />
+          <div>
+            <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100">GitHub</h3>
+            <p className="text-teal-500 dark:text-teal-400">@Soham Dube</p>
+          </div>
+        </a>
         </div>
       </div>
 

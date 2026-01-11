@@ -27,8 +27,12 @@ export async function POST(request: NextRequest) {
 
     await connectDB();
 
+    // Get role from request body (optional, for initial setup)
+    const body = await request.json().catch(() => ({}));
+    const { role } = body;
+
     // Extract user information from Clerk
-    const userData = {
+    const userData: any = {
       clerkUserId: userId,
       email: clerkUser.emailAddresses[0]?.emailAddress || '',
       firstName: clerkUser.firstName || undefined,
@@ -39,6 +43,11 @@ export async function POST(request: NextRequest) {
       lastActive: new Date(),
       updatedAt: new Date(),
     };
+
+    // Only set role if provided and valid
+    if (role && (role === 'student' || role === 'teacher')) {
+      userData.role = role;
+    }
 
     // Create or update user in MongoDB with complete Clerk data
     const user = await User.findOneAndUpdate(
@@ -51,6 +60,8 @@ export async function POST(request: NextRequest) {
       }
     );
 
+    console.log('User updated with role:', user.role);
+
     return NextResponse.json({
       success: true,
       user_id: userId,
@@ -61,6 +72,7 @@ export async function POST(request: NextRequest) {
         fullName: user.fullName,
         username: user.username,
         profileImageUrl: user.profileImageUrl,
+        role: user.role,
       },
       message: 'User created/updated successfully in MongoDB',
     });

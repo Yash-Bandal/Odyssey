@@ -14,6 +14,7 @@ import {
     FaBook,          // book icon
     FaBookOpen,      // open book
     FaGraduationCap, // graduation hat / learning
+    FaGamepad,       // game icon
 } from "react-icons/fa";
 import { useState } from "react";
 
@@ -21,11 +22,12 @@ const Sidebar = () => {
     const [collapsed, setCollapsed] = useState(false);
 
     const navItems = [
-        { to: "/", label: "Dashboard", icon: <FaHome /> },
+        { to: "/dashboard", label: "Dashboard", icon: <FaHome /> },
         { to: "/StudyManager", label: "Study Manager", icon: < FaGraduationCap /> },
+        { to: "/classroom", label: "Classroom", icon: <FaBookOpen /> },
         { to: "/ConsistencyTracker", label: "Habit Monitor", icon: <FaCalendarAlt /> },
         { to: "/workouts", label: "Workouts", icon: <FaDumbbell /> },
-
+        { to: "/simonGame", label: "Simon Says", icon: <FaGamepad /> },
     ];
 
     return (
