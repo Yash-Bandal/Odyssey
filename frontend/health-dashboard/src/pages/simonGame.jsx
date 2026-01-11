@@ -19,7 +19,7 @@ export default function SimonSays() {
   const [message, setMessage] = useState("Press any key to start");
   const [bgColor, setBgColor] = useState("bg-red-400");
 
-  // Start game on keypresss
+  // Start game on keypress
   useEffect(() => {
     const start = () => {
       if (!started) {
