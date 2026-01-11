@@ -2,70 +2,12 @@
 
 Odyssey is a **full-stack productivity and collaborative learning platform** designed to help students and educators build consistency, track progress, and engage through gamified classrooms. It combines habit tracking, streaks, analytics, and classroom collaboration into a single unified system.
 
----
 
-## 1. Overview
 
-Odyssey brings together **personal productivity** and **collaborative education** with gamification at its core.
+<br>
 
-### What Odyssey Solves
 
-* Lack of consistency in study habits
-* Low engagement in online classrooms
-* Poor visibility into progress and performance
-* Disconnected tools for productivity, learning, and wellness
-
-### Core Pillars
-
-* **Personal Productivity** – habits, streaks, goals
-* **Collaborative Learning** – classrooms, quizzes, discussions
-* **Gamification** – points, leaderboards, achievements
-* **Analytics** – heatmaps, stats, progress tracking
-* **Wellness Awareness** – study patterns and health insights
-
----
-
-## 2. Key Features
-
-### 2.1 Dashboard & Analytics
-
-* Daily / Weekly / Monthly goal tracking
-* Study streaks and consistency metrics
-* Heatmap calendar for activity visualization
-* Performance statistics and milestones
-
-### 2.2 Classroom & Collaboration
-
-* Teacher-created classrooms with join codes
-* Quiz creation, submission, and grading
-* Discussion forums for peer learning
-* Real-time leaderboards within groups
-* Live updates for scores and achievements
-
-### 2.3 Gamification System
-
-* Point-based reward system
-* Classroom-level leaderboards
-* Achievement badges for milestones
-* Role-based access (Teacher / Student)
-
-### 2.4 Productivity Tools
-
-* Study session planner
-* Workout and fitness tracking
-* Daily consistency tracker
-* Data export for personal analytics
-
-### 2.5 User Experience
-
-* Dark / Light mode toggle
-* Fully responsive UI
-* Smooth animations (Framer Motion)
-* Secure authentication with Clerk
-
----
-
-## 3. Tech Stack
+## Tech Stack
 
 ### Frontend
 
@@ -94,9 +36,11 @@ Odyssey brings together **personal productivity** and **collaborative education*
 * Protected API routes via middleware
 * Secure environment variables
 
----
 
-## 4. Project Structure
+<br>
+
+
+## Project Structure
 
 ```
 Odyssey/
@@ -131,32 +75,29 @@ Odyssey/
 └── README.md
 ```
 
----
 
-## 5. Getting Started
 
-### 5.1 Prerequisites
 
-* Node.js v18+
-* npm or yarn
-* MongoDB Atlas account
-* Clerk account
-* Git
 
----
 
-## 6. Setup Instructions
 
-### 6.1 Clone Repository
+<br>
+
+
+##  Setup Instructions
+
+###  Clone Repository
 
 ```bash
 git clone https://github.com/Yash-Bandal/Odyssey.git
 cd Odyssey
 ```
 
----
 
-### 6.2 Backend Setup (Next.js)
+<br>
+
+
+### Backend Setup
 
 ```bash
 cd backend
@@ -184,9 +125,11 @@ Backend runs at:
 http://localhost:5000
 ```
 
----
 
-### 6.3 Frontend Setup (React + Vite)
+<br>
+
+
+###  Frontend Setup (React + Vite)
 
 ```bash
 cd frontend/health-dashboard
@@ -211,9 +154,11 @@ Open:
 http://localhost:5173
 ```
 
----
 
-## 7. Authentication Flow
+<br>
+
+
+## 7Authentication Flow
 
 ```
 User → Clerk Sign-In / Sign-Up
@@ -227,9 +172,11 @@ Backend middleware validates token
 User ID extracted and request processed
 ```
 
----
 
-## 8. API Overview
+<br>
+
+
+##  API Overview
 
 ### Public
 
@@ -265,9 +212,11 @@ User ID extracted and request processed
 * `POST /api/classroom/discussions`
 * `POST /api/classroom/discussions/[threadId]/reply`
 
----
 
-## 9. Classroom Workflow
+<br>
+
+
+## Classroom Workflow
 
 ### Teachers
 
@@ -283,45 +232,14 @@ User ID extracted and request processed
 * Participate in discussions (+5 points)
 * Track rank and achievements
 
----
 
-## 10. Development Commands
+<br>
 
-### Backend
 
-```bash
-npm run dev
-npm run build
-npm run start
-npm run lint
-```
-
-### Frontend
-
-```bash
-npm run dev
-npm run build
-npm run preview
-npm run lint
-```
-
----
-
-## 11. License
+##  License
 
 MIT License – free to use for learning, personal, and commercial projects.
 
----
 
-## 12. Acknowledgements
 
-* Clerk – Authentication platform
-* MongoDB – Database
-* Next.js – Full-stack framework
-* React Community
-* Tailwind CSS
-* Vite
 
----
-
-**Built for learners, educators, and consistency-driven growth.**
