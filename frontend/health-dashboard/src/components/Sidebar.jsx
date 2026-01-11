@@ -14,8 +14,8 @@ import {
     FaCalendarAlt,
     FaBook,          // book icon
     FaBookOpen,      // open book
-    FaGraduationCap, 
-    FaTrophy// graduation hat / learning
+    FaGraduationCap, // graduation hat / learning
+    FaTrophy,         // trophy icon,
 } from "react-icons/fa";
 import { useState } from "react";
 
