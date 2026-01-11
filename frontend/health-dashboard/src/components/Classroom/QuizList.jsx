@@ -129,24 +129,19 @@ const QuizList = () => {
                 </div>
 
                 <div className="flex gap-2">
-                  {userRole === 'student' && !quiz.submitted && (
-                    <>
-                      <button
-                        onClick={() => navigate(`/classroom/quiz/${quiz._id}/take`)}
-                        className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition font-semibold shadow-md flex items-center gap-2"
-                      >
-                        <BookOpen size={20} />
-                        Take Quiz
-                      </button>
-                      <button
-                        onClick={() => navigate(`/classroom/quiz/${quiz._id}/take`)}
-                        className="bg-blue-600 text-white px-4 py-3 rounded-lg hover:bg-blue-700 transition"
-                      >
-                        Open Quiz
-                      </button>
-                    </>
+                  {/* Show Take Quiz for students */}
+                  {!quiz.submitted && (
+                    <button
+                      onClick={() => navigate(`/classroom/quiz/${quiz._id}/take`)}
+                      className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition font-semibold shadow-md flex items-center gap-2"
+                    >
+                      <BookOpen size={20} />
+                      Take Quiz
+                    </button>
                   )}
-                  {userRole === 'student' && quiz.submitted && (
+                  
+                  {/* Show Already Submitted if quiz is completed */}
+                  {quiz.submitted && (
                     <button
                       disabled
                       className="bg-gray-300 dark:bg-gray-700 text-gray-600 dark:text-gray-400 px-6 py-3 rounded-lg cursor-not-allowed flex items-center gap-2"
@@ -155,29 +150,17 @@ const QuizList = () => {
                       Already Submitted
                     </button>
                   )}
+                  
+                  {/* Show View Submissions for teachers */}
                   {userRole === 'teacher' && (
-                    <>
-                      <button
-                        onClick={() => navigate(`/classroom/quiz/${quiz._id}/take`)}
-                        className="bg-blue-600 text-white px-4 py-3 rounded-lg hover:bg-blue-700 transition"
-                      >
-                        Open Quiz
-                      </button>
-                      <button
-                        onClick={() => navigate(`/classroom/quiz/${quiz._id}/submissions`)}
-                        className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition font-semibold"
-                      >
-                        View Submissions ({quiz.submissionCount || 0})
-                      </button>
-                    </>
+                    <button
+                      onClick={() => navigate(`/classroom/quiz/${quiz._id}/submissions`)}
+                      className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition font-semibold ml-2"
+                    >
+                      View Submissions ({quiz.submissionCount || 0})
+                    </button>
                   )}
                 </div>
-                
-                {userRole === 'student' && !quiz.submitted && (
-                  <p className="text-sm text-green-600 dark:text-green-400 mt-2 font-medium">
-                    💰 Earn +5 points per correct answer!
-                  </p>
-                )}
               </div>
             ))}
           </div>

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@clerk/nextjs/server';
 import connectDB from '@/lib/mongodb';
-import { Quiz, Group, User } from '@/models';
+import { Quiz, Group, User, Submission } from '@/models';
 
 // POST /api/classroom/quizzes - Create a quiz (Teacher only)
 export async function POST(request: NextRequest) {
@@ -166,14 +166,40 @@ export async function GET(request: NextRequest) {
     // Get quizzes
     const quizzes = await Quiz.find({ groupId, isActive: true }).sort({ createdAt: -1 });
 
-    // Format response
-    const formattedQuizzes = quizzes.map((quiz) => ({
-      _id: quiz._id,
-      title: quiz.title,
-      description: quiz.description,
-      questionCount: quiz.questions.length,
-      createdAt: quiz.createdAt,
-    }));
+    // Get user info for additional data
+    const user = await User.findOne({ clerkUserId: userId });
+    
+    // Format response with submission info
+    const formattedQuizzes = await Promise.all(
+      quizzes.map(async (quiz) => {
+        let submitted = false;
+        let submissionCount = 0;
+
+        if (user?.role === 'student') {
+          // Check if student has submitted
+          const submission = await Submission.findOne({
+            quizId: quiz._id,
+            studentId: userId,
+          });
+          submitted = !!submission;
+        } else if (user?.role === 'teacher') {
+          // Get submission count for teacher
+          submissionCount = await Submission.countDocuments({
+            quizId: quiz._id,
+          });
+        }
+
+        return {
+          _id: quiz._id,
+          title: quiz.title,
+          description: quiz.description,
+          questionCount: quiz.questions.length,
+          createdAt: quiz.createdAt,
+          submitted,
+          submissionCount,
+        };
+      })
+    );
 
     return NextResponse.json({
       success: true,

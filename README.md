@@ -25,11 +25,8 @@ A productivity and health tracking dashboard with streak management, study track
 - Framer Motion
 
 ### Backend
-- Python Flask
-- SQLite
-- Flask-CORS
-- JWT Authentication
-- python-dotenv
+- Next js
+- MongoDB
 
 ## Prerequisites
 
