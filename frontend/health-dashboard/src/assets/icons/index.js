@@ -1,0 +1,1 @@
+// Empty index.js file - icons removed as they were unused
