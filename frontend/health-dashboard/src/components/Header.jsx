@@ -39,8 +39,8 @@ const Header = () => {
       
       {/* Brand / Title */}
       <h1 className="text-xl font-semibold tracking-wide">
-        <span className="text-gray-900 dark:text-white">YB</span>{" "}
-        <span className="text-blue-600 dark:text-blue-400">Productions</span>
+        <span className="text-gray-900 dark:text-white">TEAM</span>{" "}
+        <span className="text-blue-600 dark:text-blue-400">SUNDAY</span>
       </h1>
 
       {/* Right Side - Theme Toggle & User Button */}
