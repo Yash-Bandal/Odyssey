@@ -25,6 +25,7 @@ const Sidebar = () => {
         { to: "/StudyManager", label: "Study Manager", icon: < FaGraduationCap /> },
         { to: "/ConsistencyTracker", label: "Habit Monitor", icon: <FaCalendarAlt /> },
         { to: "/workouts", label: "Workouts", icon: <FaDumbbell /> },
+        { to: "/game", label: "Simon Says", icon: <FaDumbbell /> },
 
     ];
 
@@ -72,3 +73,4 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
+
