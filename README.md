@@ -84,12 +84,12 @@ Odyssey/
     <td align="center" width="600">
  <img width="300"  alt="image" src="https://github.com/user-attachments/assets/60706c85-1301-451d-9d5a-e91e18d52e23" />
       <br>
-      <b>Main Dashboard</b>
+      <b>Landing Page</b>
     </td>
     <td align="center" width="600">
      <img width="300"  alt="image" src="https://github.com/user-attachments/assets/2031ad28-6b0c-4089-b113-80e488b66eea" />
       <br>
-      <b>Load Planner</b>
+      <b>Main Dashboard</b>
     </td>
   </tr>
 </table>
