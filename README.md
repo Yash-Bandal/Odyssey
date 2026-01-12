@@ -2,6 +2,7 @@
 
 Odyssey is a **full-stack productivity and collaborative learning platform** designed to help students and educators build consistency, track progress, and engage through gamified classrooms. It combines habit tracking, streaks, analytics, and classroom collaboration into a single unified system.
 
+## [Demo Walkthrough](https://youtu.be/Bs6aELuIvBQ)
 
 
 <br>
