@@ -5,7 +5,7 @@ Odyssey is a **full-stack productivity and collaborative learning platform** des
 
 ## Demo Walkthrough
 - [Drive](https://drive.google.com/drive/folders/1Bp7iuoNgZvt5jGEGK1vEEw2F00yuf5TT)
-- [YouTube](https://youtu.be/Bs6aELuIvBQ)
+- [YouTube](https://youtu.be/QpR5R5gCBVY)
 
 
 <br>
