@@ -98,9 +98,45 @@ Odyssey/
 └── README.md
 ```
 
+## Flowchart
+
+```
+                           ┌──────────────┐
+                           │  Team Sunday │
+                           └──────────────┘
 
 
+        login
+          │
+          ▼
+     ┌─────────┐
+     │ Odyssey │
+     └─────────┘
+        │
+        │
+        ├───────────────────────┐
+        │                       │
+        ▼                       ▼
+   ┌─────────┐             ┌─────────┐
+   │ Faculty │             │ Student │
+   └─────────┘             └─────────┘
+        │                       │
+        │                       ├── Leaderboard
+        ▼                       ├── Join classroom
+ ┌────────────────-┐             ├── Upload Assignment
+ │ Create Classroom│             ├── Reply on announcement
+ └───────────────-─┘             └── Motivational message
+        │                           (based on leaderboard position)
+        ▼
+ ┌───────────────-─┐
+ │ Manage Classroom│
+ └───────────────-─┘
+        │
+        ├── Assign Assignment
+        ├── Announcements
+        └── Add / Delete Student
 
+```
 <br>
 
 
