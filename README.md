@@ -260,7 +260,6 @@ User ID extracted and request processed
 
 
 ##  License
-
 MIT License – free to use for learning, personal, and commercial projects.
 
 
